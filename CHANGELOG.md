@@ -6,8 +6,8 @@
 
 ## [最新更改]
 
-[最新更改]: https://github.com/jujili/clock/compare/v0.0.0...HEAD
-<!-- [0.1.0]: https://github.com/jujili/clock/compare/v0.0.0...v0.1.0 -->
+[最新更改]: https://github.com/jujili/bt/compare/v0.0.0...HEAD
+<!-- [0.1.0]: https://github.com/jujili/bt/compare/v0.0.0...v0.1.0 -->
 
 <!-- ### 添加 -->
 <!-- ### 变更 -->
