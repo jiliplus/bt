@@ -1,8 +1,14 @@
 package bt
 
+type account struct {
+	// 持仓量
+	pos float64
+}
+
 // demo 实现了 Strategy 接口
 // demo 会更具两条均线的金叉与死叉来进行交易
 type demo struct {
+	account
 	// 可调参数
 	fastWindow, slowWindow int
 
@@ -48,6 +54,7 @@ func (d *demo) OnBar(line string) {
 
 	if crossOver {
 		d.log("发生了金叉，准备买入")
+		d.pos = -1
 		// price := bar.close + 5
 		// if d.pos == 0 {
 		//   d.buy("梭哈")
@@ -65,5 +72,9 @@ func (d *demo) OnBar(line string) {
 		//   d.short("梭哈")
 		// }
 	}
+	d.putEvent()
+}
 
+// 通知界面更新
+func (d *demo) putEvent() {
 }
